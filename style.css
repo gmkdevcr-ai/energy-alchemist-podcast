@@ -39,8 +39,6 @@ body::before {
 }
 
 /* HERO */
-
-.hero {
 .hero {
   height: 100vh;
 
@@ -60,7 +58,6 @@ body::before {
   text-align: center;
 
   padding: 20px;
-}
 }
 
 .overlay h1 {
