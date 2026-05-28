@@ -44,13 +44,14 @@ body::before {
 
   background:
     linear-gradient(
-      rgba(2,6,23,0.7),
-      rgba(2,6,23,0.9)
+      rgba(2,6,23,0.75),
+      rgba(2,6,23,0.85)
     ),
     url('cover.png');
 
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   display: flex;
   justify-content: center;
