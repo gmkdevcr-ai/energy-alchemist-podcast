@@ -299,3 +299,72 @@ nav h2 {
   }
 
 }
+/* GLOW EFFECT */
+
+.overlay h1 {
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+
+  from {
+    text-shadow:
+      0 0 10px #8b5cf6,
+      0 0 20px #8b5cf6;
+  }
+
+  to {
+    text-shadow:
+      0 0 20px #c084fc,
+      0 0 40px #c084fc;
+  }
+
+}
+
+/* BUTTON EFFECT */
+
+.btn:hover {
+
+  transform: scale(1.08);
+
+  box-shadow:
+    0 0 40px rgba(139,92,246,0.8);
+
+}
+
+/* CARD HOVER */
+
+.card:hover {
+
+  transform:
+    translateY(-10px)
+    scale(1.02);
+
+}
+
+/* SCROLL SMOOTH */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CUSTOM SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+
+  background:
+    linear-gradient(
+      #8b5cf6,
+      #6366f1
+    );
+
+  border-radius: 20px;
+}
