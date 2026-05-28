@@ -1,14 +1,15 @@
 body {
   margin: 0;
-  background: linear-gradient(to bottom, #0f172a, #1e293b);
-  background-size: 400% 400%;
-  animation: gradientMove 12s ease infinite;
-  color: white;
   font-family: Arial, sans-serif;
-  text-align: center;
-background: radial-gradient(circle at top, #312e81, #020617);
-overflow-x: hidden;
-  body::before {
+  background:
+    radial-gradient(circle at top, #312e81, #020617);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ESTRELLAS */
+
+body::before {
   content: "";
   position: fixed;
   width: 200%;
@@ -18,118 +19,135 @@ overflow-x: hidden;
   background-size: 50px 50px;
   opacity: 0.08;
   animation: moveStars 80s linear infinite;
+  z-index: -1;
 }
 
 @keyframes moveStars {
   from {
     transform: translateY(0);
   }
+
   to {
     transform: translateY(-500px);
   }
 }
-}
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-}
+/* HERO */
 
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-header {
-  padding: 80px 20px;
-}
-
-h1 {
-  font-size: 4rem;
-  color: #c084fc;
-}
-
-.subtitle {
-  color: #d1d5db;
-  font-size: 1.2rem;
-}
-
-button {
-  margin-top: 30px;
-  padding: 15px 35px;
-  border: none;
-  border-radius: 15px;
-  background: #c084fc;
-  color: white;
-  font-size: 1rem;
-}
-
-.episodes {
-  padding: 50px 20px;
-}
-
-.card {
-  width: 320px;
-  margin: 20px auto;
-  padding: 25px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 25px rgba(192,132,252,0.15);
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 20px 0;
-}
-
-.socials a {
-  color: white;
-  background: rgba(255,255,255,0.08);
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
+.hero {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(139,92,246,0.7);
+}
+
+.overlay p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  color: #d1d5db;
+}
+
+/* BOTON */
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 35px;
+  background: linear-gradient(
+    to right,
+    #8b5cf6,
+    #6366f1
+  );
+  color: white;
   text-decoration: none;
-  font-size: 1.5rem;
+  border-radius: 14px;
+  font-size: 1rem;
+  transition: 0.3s;
+  box-shadow: 0 0 25px rgba(139,92,246,0.5);
 }
 
-footer {
-  padding: 40px;
+.btn:hover {
+  transform: scale(1.05);
 }
 
-@keyframes gradientMove {
+/* EPISODIOS */
 
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-  .spotify-player {
-  padding: 60px 20px;
+.episodes {
+  padding: 80px 20px;
+  text-align: center;
 }
 
+.episodes h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
 }
+
+/* CARDS */
+
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  margin: 25px auto;
+  padding: 25px;
+  border-radius: 24px;
+  max-width: 600px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(139,92,246,0.3);
+}
+
+/* SPOTIFY */
 
 .spotify {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+}
+
+.spotify h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
 }
 
 .spotify iframe {
   max-width: 700px;
+}
+
+/* REDES */
+
+.socials {
+  text-align: center;
+  padding: 50px;
+}
+
+.socials a {
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #a78bfa;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: rgba(0,0,0,0.3);
+  color: #9ca3af;
 }
