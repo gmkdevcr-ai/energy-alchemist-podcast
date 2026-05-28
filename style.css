@@ -6,6 +6,28 @@ body {
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
+background: radial-gradient(circle at top, #312e81, #020617);
+overflow-x: hidden;
+  body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background-image:
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.08;
+  animation: moveStars 80s linear infinite;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-500px);
+  }
+}
 }
 
 nav {
