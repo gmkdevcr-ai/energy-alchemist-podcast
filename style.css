@@ -42,12 +42,12 @@ body::before {
 .hero {
   height: 100vh;
 
-  background:
+  background-image:
     linear-gradient(
-      rgba(2,6,23,0.75),
+      rgba(2,6,23,0.7),
       rgba(2,6,23,0.85)
     ),
-    url('cover.png');
+    url("cover.png");
 
   background-size: cover;
   background-position: center;
